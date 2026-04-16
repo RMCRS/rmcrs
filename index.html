@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<!-- saved from url=(0045)file:///C:/Users/servi/Downloads/rmcrs_1.html -->
+<!-- saved from url=(0045)file:///C:/Users/servi/Downloads/rmcrs_2.html -->
 <html lang="fr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>RMCRS – Les Réparations de Machines à Café Rive-Sud</title>
 <link rel="preconnect" href="https://fonts.googleapis.com/">
-<link href="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/css2" rel="stylesheet">
+<link href="./index_files/css2" rel="stylesheet">
 <style>
 :root{--forest:#2d4a2d;--green:#4a7c59;--cream:#f5efe0;--cream-dark:#e8dfc8;--gold:#c9a84c;--red:#c0392b;--text:#1a2e1a;--text-light:#4a5e4a;--white:#fefdf9}
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);font-size:16px;line-height:1.7}
 nav{background:var(--forest);position:sticky;top:0;z-index:100;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;box-shadow:0 2px 12px rgba(0,0,0,.18)}
-.nav-brand{font-family:'Playfair Display',serif;color:var(--cream);font-size:1.1rem;font-weight:500}
+.nav-brand{font-family:'Playfair Display',serif;color:var(--cream);font-size:1rem;font-weight:500}
 .nav-brand span{color:var(--gold)}
 .nav-links{display:flex}
 .nav-links a{color:var(--cream-dark);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:.04em;text-transform:uppercase;padding:0 .95rem;height:64px;display:flex;align-items:center;border-bottom:3px solid transparent;transition:color .2s,border-color .2s}
 .nav-links a:hover,.nav-links a.active{color:var(--gold);border-bottom-color:var(--gold)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;background:none;border:none}
+.hamburger span{display:block;width:24px;height:2px;background:var(--cream);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 .page{display:none;min-height:calc(100vh - 64px)}
 .page.active{display:block}
 .hero{position:relative;height:500px;overflow:hidden}
@@ -91,7 +96,7 @@ nav{background:var(--forest);position:sticky;top:0;z-index:100;padding:0 2rem;di
 .commande-box strong{color:var(--forest)}
 /* CONTACT */
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:1.5rem}
-@media(max-width:720px){.contact-grid{grid-template-columns:1fr}.hero{height:360px}.hero-overlay{padding:1.8rem}.hero-text h1{font-size:1.9rem}.section{padding:2.5rem 1.4rem}.nav-links a{padding:0 .5rem;font-size:.71rem}}
+@media(max-width:720px){.hamburger{display:flex}.nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--forest);flex-direction:column;padding:.5rem 0;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:99}.nav-links.open{display:flex}.nav-links a{height:auto;padding:1rem 1.5rem;border-bottom:none;border-left:3px solid transparent;font-size:.95rem;letter-spacing:.02em}.nav-links a:hover,.nav-links a.active{border-left-color:var(--gold);border-bottom:none;background:rgba(255,255,255,.07)}.nav-brand{font-size:.8rem}.contact-grid{grid-template-columns:1fr}.hero{height:360px}.hero-overlay{padding:1.8rem}.hero-text h1{font-size:1.9rem}.section{padding:2.5rem 1.4rem}}
 .info-block{margin-bottom:1.8rem}
 .info-block h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--forest);margin-bottom:.8rem;padding-bottom:.4rem;border-bottom:1px solid var(--cream-dark)}
 .info-row{display:flex;gap:1rem;margin-bottom:.4rem;font-size:.9rem}
@@ -119,11 +124,14 @@ h3.section-title{font-family:'Playfair Display',serif;color:var(--forest);font-s
 
 <nav>
   <div class="nav-brand">RMCRS <span>·</span> Les Réparations de Machines à Café Rive-Sud</div>
-  <div class="nav-links">
-    <a href="file:///C:/Users/servi/Downloads/rmcrs_1.html#" class="active" onclick="showPage(&#39;accueil&#39;,this);return false">Accueil</a>
-    <a href="file:///C:/Users/servi/Downloads/rmcrs_1.html#" onclick="showPage(&#39;boutique&#39;,this);return false">Boutique</a>
-    <a href="file:///C:/Users/servi/Downloads/rmcrs_1.html#" onclick="showPage(&#39;fonctionnement&#39;,this);return false">Comment ça marche</a>
-    <a href="file:///C:/Users/servi/Downloads/rmcrs_1.html#" onclick="showPage(&#39;contact&#39;,this);return false">Contact</a>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
+    <a href="file:///C:/Users/servi/Downloads/rmcrs_2.html#" class="active" onclick="showPage(&#39;accueil&#39;,this);return false">Accueil</a>
+    <a href="file:///C:/Users/servi/Downloads/rmcrs_2.html#" onclick="showPage(&#39;boutique&#39;,this);return false">Boutique</a>
+    <a href="file:///C:/Users/servi/Downloads/rmcrs_2.html#" onclick="showPage(&#39;fonctionnement&#39;,this);return false">Comment ça marche</a>
+    <a href="file:///C:/Users/servi/Downloads/rmcrs_2.html#" onclick="showPage(&#39;contact&#39;,this);return false">Contact</a>
   </div>
 </nav>
 
@@ -217,63 +225,63 @@ h3.section-title{font-family:'Playfair Display',serif;color:var(--forest);font-s
     <div class="product-grid">
 
       <div class="product-card">
-        <div class="product-img-wrap"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/ECAM22022B.jpg" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;flex&#39;" alt="ECAM22022B" style="display: none;"><span class="placeholder" style="display: flex;">🤍</span></div>
+        <div class="product-img-wrap"><img src="./index_files/ECAM22022B.jpg" onerror="this.style.display=&#39;none&#39;;this.nextElementSibling.style.display=&#39;flex&#39;" alt="ECAM22022B" style="display: none;"><span class="placeholder" style="display: flex;">🤍</span></div>
         <div class="product-badge">Neuf</div>
         <div class="product-body"><div class="product-brand">De'Longhi · Magnifica Start</div><div class="product-name">ECAM22022B</div><div class="product-desc">Super-auto compacte. Broyeur intégré, buse manuelle.</div><div class="product-price">~700 $ <span class="taxes">+ taxes</span></div><a class="btn-chat" href="https://m.me/100063644934401" target="_blank">Nous écrire</a></div>
       </div>
 
       <div class="product-card">
-        <div class="product-img-wrap"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/9336700059678.jpg" onerror="this.style.display=&#39;none&#39;" alt="ECAM22080B" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
+        <div class="product-img-wrap"><img src="./index_files/9336700059678.jpg" onerror="this.style.display=&#39;none&#39;" alt="ECAM22080B" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
         <div class="product-badge">Neuf</div>
         <div class="product-body"><div class="product-brand">De'Longhi · Magnifica Start</div><div class="product-name">ECAM22080B</div><div class="product-desc">Super-auto avec mousseur automatique LatteCrema.</div><div class="product-price">~850 $ <span class="taxes">+ taxes</span></div><a class="btn-chat" href="https://m.me/100063644934401" target="_blank">Nous écrire</a></div>
       </div>
 
       <div class="product-card">
-        <div class="product-img-wrap"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/71hqOFkpO3L._AC_SL1500_.jpg" onerror="this.style.display=&#39;none&#39;" alt="ECAM29043SB" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
+        <div class="product-img-wrap"><img src="./index_files/71hqOFkpO3L._AC_SL1500_.jpg" onerror="this.style.display=&#39;none&#39;" alt="ECAM29043SB" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
         <div class="product-badge">Neuf</div>
         <div class="product-body"><div class="product-brand">De'Longhi · Magnifica Evo</div><div class="product-name">ECAM29043SB</div><div class="product-desc">6 recettes en un touche. Broyeur conique, buse manuelle.</div><div class="product-price">~870 $ <span class="taxes">+ taxes</span></div><a class="btn-chat" href="https://m.me/100063644934401" target="_blank">Nous écrire</a></div>
       </div>
 
       <div class="product-card">
-        <div class="product-img-wrap"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/71BNx3KGHML._AC_SL1500_.jpg" onerror="this.style.display=&#39;none&#39;" alt="ECAM29084SB" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
+        <div class="product-img-wrap"><img src="./index_files/71BNx3KGHML._AC_SL1500_.jpg" onerror="this.style.display=&#39;none&#39;" alt="ECAM29084SB" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
         <div class="product-badge">Neuf</div>
         <div class="product-body"><div class="product-brand">De'Longhi · Magnifica Evo</div><div class="product-name">ECAM29084SB</div><div class="product-desc">7 recettes, mousseur automatique LatteCrema, café froid.</div><div class="product-price">~1 000 $ <span class="taxes">+ taxes</span></div><a class="btn-chat" href="https://m.me/100063644934401" target="_blank">Nous écrire</a></div>
       </div>
 
       <div class="product-card">
-        <div class="product-img-wrap"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/51M3qvIuaRL._AC_SL1000_.jpg" onerror="this.style.display=&#39;none&#39;" alt="EC890M" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
+        <div class="product-img-wrap"><img src="./index_files/51M3qvIuaRL._AC_SL1000_.jpg" onerror="this.style.display=&#39;none&#39;" alt="EC890M" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
         <div class="product-badge">Neuf</div>
         <div class="product-body"><div class="product-brand">De'Longhi · Dedica Duo</div><div class="product-name">EC890M (métal)</div><div class="product-desc">Compacte manuelle. Espresso, double espresso et cold brew.</div><div class="product-price">~300 $ <span class="taxes">+ taxes</span></div><a class="btn-chat" href="https://m.me/100063644934401" target="_blank">Nous écrire</a></div>
       </div>
 
       <div class="product-card">
-        <div class="product-img-wrap"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/51M3qvIuaRL._AC_SL1000_.jpg" onerror="this.style.display=&#39;none&#39;" alt="EC890W" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
+        <div class="product-img-wrap"><img src="./index_files/51M3qvIuaRL._AC_SL1000_.jpg" onerror="this.style.display=&#39;none&#39;" alt="EC890W" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
         <div class="product-badge">Neuf</div>
         <div class="product-body"><div class="product-brand">De'Longhi · Dedica Duo</div><div class="product-name">EC890W (blanc)</div><div class="product-desc">Même machine, coloris blanc. Espresso et cold brew.</div><div class="product-price">~300 $ <span class="taxes">+ taxes</span></div><a class="btn-chat" href="https://m.me/100063644934401" target="_blank">Nous écrire</a></div>
       </div>
 
       <div class="product-card">
-        <div class="product-img-wrap"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/81anEuAnFkL._AC_SL1500_.jpg" onerror="this.style.display=&#39;none&#39;" alt="EC9255M" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
+        <div class="product-img-wrap"><img src="./index_files/81anEuAnFkL._AC_SL1500_.jpg" onerror="this.style.display=&#39;none&#39;" alt="EC9255M" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
         <div class="product-badge">Neuf</div>
         <div class="product-body"><div class="product-brand">De'Longhi · La Specialista Arte Evo</div><div class="product-name">EC9255M</div><div class="product-desc">Semi-auto home barista. Broyeur, buse vapeur pro, cold brew.</div><div class="product-price">~900 $ <span class="taxes">+ taxes</span></div><a class="btn-chat" href="https://m.me/100063644934401" target="_blank">Nous écrire</a></div>
       </div>
 
       <div class="product-card">
-        <div class="product-img-wrap"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/61nqn6o0fHL._AC_SL1500_.jpg" onerror="this.style.display=&#39;none&#39;" alt="EC9555M" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
+        <div class="product-img-wrap"><img src="./index_files/61nqn6o0fHL._AC_SL1500_.jpg" onerror="this.style.display=&#39;none&#39;" alt="EC9555M" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
         <div class="product-badge">Neuf</div>
         <div class="product-body"><div class="product-brand">De'Longhi · La Specialista Opera</div><div class="product-name">EC9555M</div><div class="product-desc">Haut de gamme semi-auto. Température active, cold brew.</div><div class="product-price">~1 200 $ <span class="taxes">+ taxes</span></div><a class="btn-chat" href="https://m.me/100063644934401" target="_blank">Nous écrire</a></div>
       </div>
 
       <div class="product-card">
         <span class="coup-coeur">❤️ Coup de cœur Pat</span>
-        <div class="product-img-wrap"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/51KLjDMBThL._AC_SL1000_.jpg" onerror="this.style.display=&#39;none&#39;" alt="EXAM44055W" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
+        <div class="product-img-wrap"><img src="./index_files/51KLjDMBThL._AC_SL1000_.jpg" onerror="this.style.display=&#39;none&#39;" alt="EXAM44055W" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
         <div class="product-badge">Neuf</div>
         <div class="product-body"><div class="product-brand">De'Longhi · Rivelia</div><div class="product-name">EXAM44055W (blanc)</div><div class="product-desc">Super-auto premium. 16 recettes, 2 réservoirs à grains, LatteCrema, design primé.</div><div class="product-price">~1 700 $ <span class="taxes">+ taxes</span></div><a class="btn-chat" href="https://m.me/100063644934401" target="_blank">Nous écrire</a></div>
       </div>
 
       <div class="product-card">
         <span class="coup-coeur">❤️ Coup de cœur Emily</span>
-        <div class="product-img-wrap"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/51Y1f3YXLWL._AC_SL1000_.jpg" onerror="this.style.display=&#39;none&#39;" alt="EXAM44055B" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
+        <div class="product-img-wrap"><img src="./index_files/51Y1f3YXLWL._AC_SL1000_.jpg" onerror="this.style.display=&#39;none&#39;" alt="EXAM44055B" style="display: none;"><span class="placeholder" style="display:none">🤍</span></div>
         <div class="product-badge">Neuf</div>
         <div class="product-body"><div class="product-brand">De'Longhi · Rivelia</div><div class="product-name">EXAM44055B (noir)</div><div class="product-desc">Même machine, coloris onyx noir. 16 recettes, LatteCrema.</div><div class="product-price">~1 700 $ <span class="taxes">+ taxes</span></div><a class="btn-chat" href="https://m.me/100063644934401" target="_blank">Nous écrire</a></div>
       </div>
@@ -297,7 +305,7 @@ h3.section-title{font-family:'Playfair Display',serif;color:var(--forest);font-s
 
       <div class="cafe-card">
         <span class="coup-coeur">❤️ Coup de cœur Stéphane</span>
-        <div class="cafe-img-wrap dark"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/899102-spalanzani-cafe-en-grains-espresso-gran-cre.jpg" onerror="this.parentElement.classList.add(&#39;dark&#39;);this.style.display=&#39;none&#39;" alt="Spalanzani Gran Crema" style="display: none;"></div>
+        <div class="cafe-img-wrap dark"><img src="./index_files/899102-spalanzani-cafe-en-grains-espresso-gran-cre.jpg" onerror="this.parentElement.classList.add(&#39;dark&#39;);this.style.display=&#39;none&#39;" alt="Spalanzani Gran Crema" style="display: none;"></div>
         <div class="cafe-body">
           <div class="cafe-brand">Spalanzani</div>
           <div class="cafe-name">Espresso Gran Crema</div>
@@ -307,7 +315,7 @@ h3.section-title{font-family:'Playfair Display',serif;color:var(--forest);font-s
       </div>
 
       <div class="cafe-card">
-        <div class="cafe-img-wrap dark"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/Intenso-1000-g-Grains_2.jpg" onerror="this.style.display=&#39;none&#39;" alt="Agga Intenso" style="display: none;"></div>
+        <div class="cafe-img-wrap dark"><img src="./index_files/Intenso-1000-g-Grains_2.jpg" onerror="this.style.display=&#39;none&#39;" alt="Agga Intenso" style="display: none;"></div>
         <div class="cafe-body">
           <div class="cafe-brand">Agga</div>
           <div class="cafe-name">Intenso</div>
@@ -317,7 +325,7 @@ h3.section-title{font-family:'Playfair Display',serif;color:var(--forest);font-s
       </div>
 
       <div class="cafe-card">
-        <div class="cafe-img-wrap dark"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/Tesoro-di-crema-1000-g-Grains_2.jpg" onerror="this.style.display=&#39;none&#39;" alt="Agga Tesoro di Crema" style="display: none;"></div>
+        <div class="cafe-img-wrap dark"><img src="./index_files/Tesoro-di-crema-1000-g-Grains_2.jpg" onerror="this.style.display=&#39;none&#39;" alt="Agga Tesoro di Crema" style="display: none;"></div>
         <div class="cafe-body">
           <div class="cafe-brand">Agga</div>
           <div class="cafe-name">Tesoro di Crema</div>
@@ -338,7 +346,7 @@ h3.section-title{font-family:'Playfair Display',serif;color:var(--forest);font-s
 
       <div class="cafe-card">
         <span class="coup-coeur">❤️ Coup de cœur Alex</span>
-        <div class="cafe-img-wrap"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/NapoleonClassico1kg.jpg" onerror="this.style.display=&#39;none&#39;" alt="Napoléon Classico" style="display: none;"></div>
+        <div class="cafe-img-wrap"><img src="./index_files/NapoleonClassico1kg.jpg" onerror="this.style.display=&#39;none&#39;" alt="Napoléon Classico" style="display: none;"></div>
         <div class="cafe-body">
           <div class="cafe-brand">Café Napoléon</div>
           <div class="cafe-name">Espresso Classico</div>
@@ -348,7 +356,7 @@ h3.section-title{font-family:'Playfair Display',serif;color:var(--forest);font-s
       </div>
 
       <div class="cafe-card">
-        <div class="cafe-img-wrap"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/NapoleonGaribaldi1kg.jpg" onerror="this.style.display=&#39;none&#39;" alt="Napoléon Garibaldi" style="display: none;"></div>
+        <div class="cafe-img-wrap"><img src="./index_files/NapoleonGaribaldi1kg.jpg" onerror="this.style.display=&#39;none&#39;" alt="Napoléon Garibaldi" style="display: none;"></div>
         <div class="cafe-body">
           <div class="cafe-brand">Café Napoléon</div>
           <div class="cafe-name">Espresso Garibaldi</div>
@@ -358,7 +366,7 @@ h3.section-title{font-family:'Playfair Display',serif;color:var(--forest);font-s
       </div>
 
       <div class="cafe-card">
-        <div class="cafe-img-wrap"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/NapoleonDecaf1kg.jpg" onerror="this.style.display=&#39;none&#39;" alt="Napoléon Décag" style="display: none;"></div>
+        <div class="cafe-img-wrap"><img src="./index_files/NapoleonDecaf1kg.jpg" onerror="this.style.display=&#39;none&#39;" alt="Napoléon Décag" style="display: none;"></div>
         <div class="cafe-body">
           <div class="cafe-brand">Café Napoléon</div>
           <div class="cafe-name">Décaféiné naturel</div>
@@ -368,7 +376,7 @@ h3.section-title{font-family:'Playfair Display',serif;color:var(--forest);font-s
       </div>
 
       <div class="cafe-card">
-        <div class="cafe-img-wrap"><img src="./RMCRS – Les Réparations de Machines à Café Rive-Sud_files/NapoleonBarista1kg.jpg" onerror="this.style.display=&#39;none&#39;" alt="Napoléon Barista" style="display: none;"></div>
+        <div class="cafe-img-wrap"><img src="./index_files/NapoleonBarista1kg.jpg" onerror="this.style.display=&#39;none&#39;" alt="Napoléon Barista" style="display: none;"></div>
         <div class="cafe-body">
           <div class="cafe-brand">Café Napoléon</div>
           <div class="cafe-name">Espresso Barista</div>
@@ -502,6 +510,12 @@ function showPage(id,el){
   document.getElementById('page-'+id).classList.add('active');
   if(el)el.classList.add('active');
   window.scrollTo(0,0);
+  document.getElementById('nav-links').classList.remove('open');
+  document.querySelector('.hamburger').classList.remove('open');
+}
+function toggleMenu(){
+  document.getElementById('nav-links').classList.toggle('open');
+  document.querySelector('.hamburger').classList.toggle('open');
 }
 </script>
 
