@@ -130,6 +130,7 @@ h3.section-title{font-family:'Playfair Display',serif;color:var(--forest);font-s
     <a href="file:///C:/Users/servi/Downloads/index_12.html#" class="active" onclick="showPage(&#39;accueil&#39;,this);return false">Accueil</a>
     <a href="file:///C:/Users/servi/Downloads/index_12.html#" onclick="showPage(&#39;boutique&#39;,this);return false">Boutique</a>
     <a href="file:///C:/Users/servi/Downloads/index_12.html#" onclick="showPage(&#39;fonctionnement&#39;,this);return false">Comment ça marche</a>
+    <a href="e61.html">Machines E61</a>
     <a href="file:///C:/Users/servi/Downloads/index_12.html#" onclick="showPage(&#39;contact&#39;,this);return false">Contact</a>
   </div>
 </nav>
@@ -511,6 +512,8 @@ function showPage(id,el){
   document.getElementById('nav-links').classList.remove('open');
   document.querySelector('.hamburger').classList.remove('open');
 }
+(function(){var m={boutique:1,fonctionnement:2,contact:4},h=location.hash.slice(1);
+if(h in m){showPage(h,document.querySelectorAll('.nav-links a')[m[h]]);}})();
 function toggleMenu(){
   document.getElementById('nav-links').classList.toggle('open');
   document.querySelector('.hamburger').classList.toggle('open');

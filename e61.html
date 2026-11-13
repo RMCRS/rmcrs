@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entretien et réparation de machines E61 | RMCRS Rive-Sud</title>
+<meta name="description" content="Votre machine à café a un groupe E61? Ce qu&#x27;on fait lors d&#x27;un entretien, à quelle fréquence, ce que vous pouvez faire vous-même et comment choisir. RMCRS, Rive-Sud.">
+<link rel="canonical" href="https://rmcrs.ca/e61.html">
+<link rel="preconnect" href="https://fonts.googleapis.com/">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&amp;family=Playfair+Display:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+:root{--forest:#2d4a2d;--green:#4a7c59;--cream:#f5efe0;--cream-dark:#e8dfc8;--gold:#c9a84c;--red:#c0392b;--text:#1a2e1a;--text-light:#4a5e4a;--white:#fefdf9}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--text);font-size:16px;line-height:1.7}
+nav{background:var(--forest);position:sticky;top:0;z-index:100;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:64px;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+.nav-brand{font-family:'Playfair Display',serif;color:var(--cream);font-size:1rem;font-weight:500}
+.nav-brand span{color:var(--gold)}
+.nav-links{display:flex}
+.nav-links a{color:var(--cream-dark);text-decoration:none;font-size:.8rem;font-weight:400;letter-spacing:.04em;text-transform:uppercase;padding:0 .95rem;height:64px;display:flex;align-items:center;border-bottom:3px solid transparent;transition:color .2s,border-color .2s}
+.nav-links a:hover,.nav-links a.active{color:var(--gold);border-bottom-color:var(--gold)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:.5rem;background:none;border:none}
+.hamburger span{display:block;width:24px;height:2px;background:var(--cream);border-radius:2px;transition:all .3s}
+.hamburger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.hamburger.open span:nth-child(2){opacity:0}
+.hamburger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.page{display:none;min-height:calc(100vh - 64px)}
+.page.active{display:block}
+.hero{position:relative;height:500px;overflow:hidden}
+.hero img{width:100%;height:100%;object-fit:cover;object-position:center 55%;filter:brightness(.72)}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to right,rgba(45,74,45,.8) 0%,rgba(45,74,45,.08) 70%);display:flex;align-items:center;padding:4rem}
+.hero-text{max-width:520px}
+.hero-text h1{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:500;color:var(--cream);line-height:1.2;margin-bottom:1rem}
+.hero-text h1 span{color:var(--gold)}
+.hero-text p{color:var(--cream-dark);font-size:1rem;font-weight:300;margin-bottom:2rem}
+.btn-primary{display:inline-block;background:var(--gold);color:var(--forest);padding:.8rem 2rem;text-decoration:none;font-weight:500;font-size:.88rem;letter-spacing:.04em;text-transform:uppercase;border-radius:2px;cursor:pointer;border:none;transition:background .2s}
+.btn-primary:hover{background:#b8962e}
+.section{padding:3.5rem 3rem}
+.section-alt{background:var(--cream)}
+.section h2{font-family:'Playfair Display',serif;font-size:1.8rem;font-weight:500;color:var(--forest);margin-bottom:.4rem}
+.section-sub{color:var(--text-light);font-size:.92rem;margin-bottom:2rem}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.4rem;margin-top:1.5rem}
+.card{background:var(--white);border:1px solid var(--cream-dark);border-radius:4px;padding:1.6rem}
+.card-num{font-family:'Playfair Display',serif;font-size:2rem;color:var(--cream-dark);font-weight:600;line-height:1;margin-bottom:.8rem}
+.card h3{font-size:.95rem;font-weight:500;color:var(--forest);margin-bottom:.4rem}
+.card p{font-size:.88rem;color:var(--text-light);line-height:1.6}
+.options-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.2rem;margin-top:1.5rem}
+.option-box{border:2px solid var(--green);border-radius:4px;padding:1.4rem;background:var(--white)}
+.option-box h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--forest);margin-bottom:.5rem}
+.option-box p{font-size:.88rem;color:var(--text-light)}
+.tag{display:inline-block;background:var(--forest);color:var(--cream);padding:.35rem .9rem;border-radius:2px;font-size:.83rem;font-weight:500}
+.tag-red{display:inline-block;background:rgba(192,57,43,.1);color:var(--red);border:1px solid rgba(192,57,43,.28);padding:.35rem .9rem;border-radius:2px;font-size:.83rem;font-weight:500}
+/* PRODUCT CARDS */
+.product-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:1.3rem;margin-top:1.5rem}
+.product-card{background:var(--white);border:1px solid var(--cream-dark);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;position:relative}
+.coup-coeur{position:absolute;top:8px;right:8px;background:var(--gold);color:var(--forest);font-size:.66rem;font-weight:500;padding:.25rem .6rem;border-radius:20px;letter-spacing:.01em;z-index:2;white-space:nowrap}
+.product-img-wrap{width:100%;height:150px;background:#f4efe4;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.product-img-wrap img{max-height:145px;max-width:100%;object-fit:contain;padding:.4rem}
+.product-img-wrap .placeholder{font-size:2.2rem}
+.product-badge{background:var(--forest);color:var(--cream);font-size:.64rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:.22rem .7rem}
+.product-badge.refurb{background:var(--green)}
+.product-body{padding:1rem 1.1rem;flex:1;display:flex;flex-direction:column}
+.product-brand{font-size:.66rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:.12rem}
+.product-name{font-family:'Playfair Display',serif;font-size:.9rem;font-weight:500;color:var(--forest);margin-bottom:.32rem}
+.product-desc{font-size:.78rem;color:var(--text-light);flex:1;margin-bottom:.75rem;line-height:1.5}
+.product-price{font-size:1rem;font-weight:500;color:var(--forest);margin-bottom:.6rem}
+.product-price .taxes{font-size:.66rem;font-weight:400;color:var(--text-light)}
+.btn-chat{display:block;text-align:center;background:var(--forest);color:var(--cream);padding:.5rem;text-decoration:none;font-size:.76rem;font-weight:500;border-radius:2px;transition:background .2s}
+.btn-chat:hover{background:var(--green)}
+/* CAFE */
+.cafe-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:1.2rem;margin-top:1.5rem}
+.cafe-card{background:var(--white);border:1px solid var(--cream-dark);border-radius:4px;overflow:hidden;display:flex;flex-direction:column;position:relative}
+.cafe-img-wrap{width:100%;height:165px;background:#f4efe4;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.cafe-img-wrap img{max-height:160px;max-width:100%;object-fit:contain;padding:.5rem}
+.cafe-img-wrap.dark{background:#111}
+.cafe-body{padding:.85rem 1rem;flex:1;display:flex;flex-direction:column}
+.cafe-brand{font-size:.63rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:.12rem}
+.cafe-name{font-family:'Playfair Display',serif;font-size:.86rem;font-weight:500;color:var(--forest);margin-bottom:.28rem}
+.cafe-note{font-size:.75rem;color:var(--text-light);line-height:1.4;margin-bottom:.4rem}
+.cafe-price{font-size:.95rem;font-weight:500;color:var(--forest);margin-top:auto;padding-top:.4rem}
+.cafe-price .taxes{font-size:.64rem;font-weight:400;color:var(--text-light)}
+/* PROMO */
+.promo-banner{background:var(--gold);color:var(--forest);padding:1rem 1.5rem;border-radius:4px;margin-bottom:1.8rem;display:flex;align-items:center;gap:1rem;flex-wrap:wrap}
+.promo-banner strong{font-size:.98rem}
+.promo-banner span{font-size:.86rem}
+/* WANTED */
+.wanted-section{background:var(--forest);color:var(--cream);padding:2rem 2.5rem;border-radius:4px;margin-top:2.5rem}
+.wanted-section h3{font-family:'Playfair Display',serif;font-size:1.15rem;margin-bottom:.4rem;color:var(--gold)}
+.wanted-section p{font-size:.86rem;color:var(--cream-dark);margin-bottom:1rem;line-height:1.6}
+/* GARANTIE */
+.garantie-strip{background:rgba(74,124,89,.1);border:1px solid var(--green);border-radius:4px;padding:.85rem 1.3rem;display:flex;align-items:center;gap:.8rem;margin-top:2rem;font-size:.88rem;color:var(--forest)}
+/* PRICE BOX */
+.price-box{background:var(--forest);color:var(--cream);padding:1.7rem 2.1rem;border-radius:4px;display:inline-block;margin-top:1.5rem}
+.price-box .price-range{font-family:'Playfair Display',serif;font-size:1.9rem;color:var(--gold);font-weight:600}
+.price-box p{font-size:.83rem;color:var(--cream-dark);margin-top:.3rem}
+.info-tag{display:inline-block;background:var(--green);color:var(--cream);padding:.22rem .75rem;font-size:.72rem;border-radius:2px;margin-top:.65rem;font-weight:500}
+.info-tag-gold{display:inline-block;background:var(--gold);color:var(--forest);padding:.22rem .75rem;font-size:.72rem;border-radius:2px;margin-top:.65rem;margin-left:.35rem;font-weight:500}
+.commande-box{background:var(--cream);border-left:4px solid var(--gold);padding:1rem 1.4rem;margin-top:1.5rem;font-size:.88rem}
+.commande-box strong{color:var(--forest)}
+/* CONTACT */
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3rem;margin-top:1.5rem}
+@media(max-width:720px){.hamburger{display:flex}.nav-links{display:none;position:absolute;top:64px;left:0;right:0;background:var(--forest);flex-direction:column;padding:.5rem 0;box-shadow:0 4px 12px rgba(0,0,0,.3);z-index:99}.nav-links.open{display:flex}.nav-links a{height:auto;padding:1rem 1.5rem;border-bottom:none;border-left:3px solid transparent;font-size:.95rem;letter-spacing:.02em}.nav-links a:hover,.nav-links a.active{border-left-color:var(--gold);border-bottom:none;background:rgba(255,255,255,.07)}.nav-brand{font-size:.8rem}.contact-grid{grid-template-columns:1fr}.hero{height:360px}.hero-overlay{padding:1.8rem}.hero-text h1{font-size:1.9rem}.section{padding:2.5rem 1.4rem}}
+.info-block{margin-bottom:1.8rem}
+.info-block h3{font-family:'Playfair Display',serif;font-size:1rem;color:var(--forest);margin-bottom:.8rem;padding-bottom:.4rem;border-bottom:1px solid var(--cream-dark)}
+.info-row{display:flex;gap:1rem;margin-bottom:.4rem;font-size:.9rem}
+.info-label{color:var(--text-light);font-size:.75rem;font-weight:500;text-transform:uppercase;letter-spacing:.06em;min-width:85px;padding-top:.15rem}
+.hours-row{display:flex;justify-content:space-between;padding:.3rem 0;border-bottom:1px solid var(--cream-dark);font-size:.87rem}
+.hours-row:last-child{border-bottom:none}
+.hours-row .day{color:var(--text-light)}
+.hours-row .time{font-weight:500;color:var(--forest)}
+.hours-row .closed{color:#999;font-style:italic}
+.map-placeholder{background:var(--cream);border:1px solid var(--cream-dark);border-radius:4px;height:260px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.5rem}
+.map-link{display:inline-block;margin-top:.8rem;background:var(--forest);color:var(--cream);padding:.5rem 1.2rem;text-decoration:none;font-size:.8rem;border-radius:2px;font-weight:500}
+.divider{height:1px;background:var(--cream-dark);margin:2rem 0}
+.messenger-fab{position:fixed;bottom:2rem;right:2rem;z-index:999;text-decoration:none}
+.messenger-fab-inner{background:#0084ff;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(0,132,255,.4);transition:transform .2s}
+.messenger-fab:hover .messenger-fab-inner{transform:scale(1.08)}
+.messenger-fab svg{width:28px;height:28px;fill:white}
+.messenger-tooltip{position:absolute;right:68px;top:50%;transform:translateY(-50%);background:var(--forest);color:var(--cream);padding:.35rem .85rem;border-radius:3px;font-size:.76rem;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.messenger-fab:hover .messenger-tooltip{opacity:1}
+footer{background:var(--forest);color:var(--cream-dark);text-align:center;padding:1.3rem;font-size:.79rem}
+footer a{color:var(--gold);text-decoration:none}
+h3.section-title{font-family:'Playfair Display',serif;color:var(--forest);font-size:1.12rem;margin-bottom:.9rem;margin-top:2.2rem}
+</style>
+<style>
+.prose{max-width:760px}
+.prose h2{line-height:1.3;margin-top:2.2rem;margin-bottom:.8rem}
+.prose p{margin-bottom:1rem;color:var(--text)}
+.lead{font-size:1.08rem;color:var(--forest)}
+.figure{margin:1.8rem auto;max-width:600px}
+.figure figcaption{font-size:.86rem;color:var(--text-light);text-align:center;margin-top:.7rem}
+.brand-table{border-collapse:collapse;width:100%;max-width:560px;margin:1rem 0 .6rem;font-size:.92rem}
+.brand-table td{padding:.5rem .8rem;border-bottom:1px solid var(--cream-dark)}
+.brand-table td:last-child{color:var(--text-light)}
+.volets{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem;margin:1.5rem 0}
+.volet{background:var(--white);border:1px solid var(--cream-dark);border-top:3px solid var(--green);border-radius:4px;padding:1.3rem}
+.volet h3{font-family:'Playfair Display',serif;font-size:1.02rem;color:var(--forest);margin-bottom:.5rem}
+.volet ul{margin-left:1.1rem;font-size:.9rem;color:var(--text-light)}
+.volet li{margin-bottom:.3rem}
+.note-box{background:rgba(74,124,89,.1);border:1px solid var(--green);border-radius:4px;padding:1rem 1.3rem;margin:1.3rem 0;color:var(--forest);font-size:.95rem}
+.faq-item{border-bottom:1px solid var(--cream-dark);padding:.9rem 0}
+.faq-item summary{cursor:pointer;font-weight:500;color:var(--forest)}
+.faq-item p{margin-top:.6rem;color:var(--text-light);font-size:.93rem}
+.cta{display:flex;gap:.8rem;flex-wrap:wrap;margin-top:1.2rem}
+.btn-alt{display:inline-block;background:var(--forest);color:var(--cream);padding:.8rem 2rem;text-decoration:none;font-weight:500;font-size:.88rem;letter-spacing:.04em;text-transform:uppercase;border-radius:2px}
+@media(max-width:720px){.section{padding:2.2rem 1.2rem}.nav-brand{font-size:.8rem}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Quelle est la meilleure machine E61?", "acceptedAnswer": {"@type": "Answer", "text": "Aucune réponse n'est universelle. Elle varie selon l'espace dont vous disposez, votre routine du matin, le nombre de cafés que vous préparez et le lait que vous buvez. Dites-nous comment vous consommez votre café : on vous répond honnêtement, même si la réponse est une machine plus simple."}}, {"@type": "Question", "name": "Combien de temps faut-il pour la faire chauffer le matin?", "acceptedAnswer": {"@type": "Answer", "text": "Le groupe est une grosse masse de laiton : il met plus de temps à atteindre sa température que la chaudière. Prévoyez de 25 à 30 minutes. Un groupe qui n'a pas fini de chauffer donne un café plus acide et moins constant."}}, {"@type": "Question", "name": "Chaudière simple, échangeur de chaleur ou double chaudière : quelle différence?", "acceptedAnswer": {"@type": "Answer", "text": "Chaudière simple : une seule chaudière fait tout. Comme il n'y a pas d'espace de vapeur séparé, c'est toute la chaudière qui doit chauffer, vers une température cible, et le groupe n'est pas inclus dans cette montée. Échangeur de chaleur (HX) : la chaudière chauffe jusqu'à une pression, et le groupe est chauffé presque au complet par le thermosiphon. Double chaudière : une chaudière pour le café et une pour la vapeur, ce qui permet de préparer un café et de faire mousser le lait en même temps."}}, {"@type": "Question", "name": "Est-ce que je peux laisser ma machine allumée en permanence?", "acceptedAnswer": {"@type": "Answer", "text": "Mieux vaut l'éteindre quand vous ne l'utilisez pas. Une machine allumée en continu sollicite sans arrêt son élément chauffant et ses autres composantes, et elles s'usent plus vite. L'éteindre la fait durer plus longtemps : il suffit de prévoir le temps de chauffe du groupe le lendemain."}}, {"@type": "Question", "name": "Ma machine fuit. Que faire?", "acceptedAnswer": {"@type": "Answer", "text": "Débranchez-la, ne forcez rien et contactez-nous. Une fuite que vous voyez est déjà avancée. Ce qui commence par suinter passe souvent inaperçu pendant des mois : c'est la raison d'être de l'entretien préventif."}}, {"@type": "Question", "name": "À quelle fréquence faut-il faire l'entretien de ma E61?", "acceptedAnswer": {"@type": "Answer", "text": "En général, aux 2 à 3 ans, selon l'utilisation et la qualité de votre eau."}}]}</script>
+</head><body>
+<nav>
+  <div class="nav-brand">RMCRS <span>·</span> Les Réparations de Machines à Café Rive-Sud</div>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  <div class="nav-links" id="nav-links">
+    <a href="index.html">Accueil</a>
+    <a href="index.html#boutique">Boutique</a>
+    <a href="index.html#fonctionnement">Comment ça marche</a>
+    <a href="e61.html" class="active">Machines E61</a>
+    <a href="index.html#contact">Contact</a>
+  </div>
+</nav>
+
+<div class="page active" id="page-e61">
+<div class="section prose">
+<h1 style="font-family:'Playfair Display',serif;font-size:2rem;font-weight:500;color:var(--forest);line-height:1.25;margin-bottom:.5rem">Machines E61 : entretien et réparation</h1>
+<p class="section-sub">Pour les propriétaires de machines à groupe E61, et pour ceux qui songent à en acheter une.</p>
+
+<p class="lead">Si vous lisez cette page, vous avez probablement une E61, ou vous songez à en acheter une. Dans les deux cas, bonne nouvelle&nbsp;: ce sont des machines faites pour durer et pour se réparer. Un entretien fait au bon moment les garde en forme pendant des années.</p>
+
+<h2 style="margin-top:2.2rem">Ce qu'est une E61</h2>
+<p>«&nbsp;E61&nbsp;» désigne le groupe de la machine&nbsp;: la grosse pièce chromée où se verrouille le porte-filtre. Ce modèle de groupe existe depuis 1961 et se retrouve sur des dizaines de machines de marques différentes. Il est en laiton chromé, boulonné à la machine, et relié à la chaudière par deux tuyaux.</p>
+<p>Ces deux tuyaux forment un thermosiphon&nbsp;: l'eau chaude de la chaudière monte dans le groupe et le chauffe, puis redescend refroidie. Aucune pompe n'est nécessaire, la chaleur fait tout le travail. C'est ce qui garde la température du groupe stable d'un café à l'autre.</p>
+<figure class="figure">
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="t-th d-th" style="width:100%;max-width:560px;height:auto;display:block;margin:0 auto" viewBox="0 0 830 660" font-family="Helvetica, Arial, sans-serif">
+<title id="t-th">Le thermosiphon d'un groupe E61</title>
+<desc id="d-th">Coupe schématique: l'eau chaude de la chaudière monte par le tuyau du haut vers la tête de groupe, la chauffe, puis redescend refroidie par le tuyau du bas.</desc>
+<defs>
+<linearGradient id="wg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F0997B"/><stop offset="1" stop-color="#FAECE7"/></linearGradient>
+<clipPath id="bc"><rect x="230" y="50" width="200" height="300" rx="24"/></clipPath>
+</defs>
+<rect width="830" height="660" fill="#FFFFFF"/>
+<g transform="translate(-210,150)">
+<rect x="230" y="50" width="200" height="300" rx="24" fill="#F1EFE8"/>
+<rect x="230" y="115" width="200" height="235" fill="url(#wg)" clip-path="url(#bc)"/>
+<path d="M230 115 q10 -5 20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0 t20 0" fill="none" stroke="#D85A30" stroke-width="2" stroke-linecap="round"/>
+<path d="M268 106 q7 -7 0 -14 q-7 -7 0 -14 q7 -7 0 -14" fill="none" stroke="#B4B2A9" stroke-width="1.5" stroke-linecap="round"/><path d="M318 106 q7 -7 0 -14 q-7 -7 0 -14 q7 -7 0 -14" fill="none" stroke="#B4B2A9" stroke-width="1.5" stroke-linecap="round"/><path d="M368 106 q7 -7 0 -14 q-7 -7 0 -14 q7 -7 0 -14" fill="none" stroke="#B4B2A9" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="398" y1="20" x2="398" y2="36" stroke="#444441" stroke-width="1.5"/>
+<rect x="389" y="36" width="18" height="14" rx="2" fill="#888780" stroke="#5F5E5A"/>
+<line x1="398" y1="52" x2="398" y2="113" stroke="#5F5E5A" stroke-width="3" stroke-linecap="round"/>
+<circle cx="398" cy="114" r="3" fill="#378ADD"/>
+<path d="M318 336 V328 Q318 316 306 316 Q296 316 296 304 V166 Q296 150 311 150 Q326 150 326 166 V294 Q326 306 334 306 Q342 306 342 294 V166 Q342 150 357 150 Q372 150 372 166 V336" fill="none" stroke="#E24B4A" stroke-opacity="0.35" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M318 336 V328 Q318 316 306 316 Q296 316 296 304 V166 Q296 150 311 150 Q326 150 326 166 V294 Q326 306 334 306 Q342 306 342 294 V166 Q342 150 357 150 Q372 150 372 166 V336" fill="none" stroke="#A32D2D" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="306" y="334" width="78" height="16" rx="2" fill="#BA7517" stroke="#854F0B"/>
+<rect x="230" y="50" width="200" height="300" rx="24" fill="none" stroke="#5F5E5A" stroke-width="1.5"/>
+<rect x="300" y="350" width="90" height="5" rx="1" fill="#FFFFFF" stroke="#B4B2A9"/>
+<rect x="310" y="355" width="70" height="13" rx="2" fill="#BA7517" stroke="#854F0B"/>
+<rect x="327" y="368" width="7" height="20" rx="1" fill="#888780" stroke="#5F5E5A"/>
+<rect x="356" y="368" width="7" height="20" rx="1" fill="#888780" stroke="#5F5E5A"/>
+</g>
+<rect x="220" y="288" width="14" height="14" rx="2" fill="#888780" stroke="#5F5E5A"/>
+<rect x="220" y="468" width="14" height="14" rx="2" fill="#888780" stroke="#5F5E5A"/>
+<path d="M234 295 H280 Q290 295 290 285 V135 Q290 125 300 125 H348" fill="none" stroke="#B4B2A9" stroke-width="10"/>
+<path d="M348 210 H325 Q315 210 315 220 V465 Q315 475 305 475 H234" fill="none" stroke="#B4B2A9" stroke-width="10"/>
+<path d="M234 295 H280 Q290 295 290 285 V135 Q290 125 300 125 H348" fill="none" stroke="#D85A30" stroke-width="4" stroke-dasharray="12 9"/>
+<path d="M348 210 H325 Q315 210 315 220 V465 Q315 475 305 475 H234" fill="none" stroke="#378ADD" stroke-width="4" stroke-dasharray="12 9"/>
+<g transform="translate(164,0)">
+<rect x="176" y="40" width="8" height="380" fill="#B4B2A9"/>
+<rect x="184" y="110" width="20" height="116" rx="3" fill="#888780" stroke="#5F5E5A"/>
+<path d="M204 100 H262 L290 206 Q298 226 336 228 H204 Z" fill="#D3D1C7" stroke="#5F5E5A" stroke-width="1.2"/>
+<rect x="214" y="80" width="38" height="20" rx="2" fill="#B4B2A9" stroke="#5F5E5A"/>
+<rect x="219" y="62" width="28" height="18" rx="2" fill="#B4B2A9" stroke="#5F5E5A"/>
+<polygon points="214,110 254,110 280,212 214,212" fill="#F1EFE8"/>
+<rect x="234" y="136" width="12" height="44" rx="2" fill="#5F5E5A"/>
+<line x1="209" y1="125" x2="209" y2="168" stroke="#D85A30" stroke-width="7" stroke-linecap="round"/>
+<line x1="209" y1="168" x2="209" y2="210" stroke="#378ADD" stroke-width="7" stroke-linecap="round"/>
+<rect x="214" y="226" width="200" height="40" rx="10" fill="#D3D1C7" stroke="#5F5E5A" stroke-width="1.2"/>
+<circle cx="245" cy="246" r="12" fill="#888780" stroke="#5F5E5A"/>
+<rect x="324" y="234" width="14" height="20" rx="1.5" fill="#BA7517" stroke="#854F0B"/>
+<circle cx="331" cy="250" r="1.6" fill="#412402"/>
+<path d="M300 254 Q331 251 362 254 L360 259 H302 Z" fill="#BA7517" stroke="#854F0B"/>
+<rect x="250" y="261" width="156" height="5" rx="2" fill="#888780"/>
+<rect x="218" y="266" width="44" height="96" rx="6" fill="#D3D1C7" stroke="#5F5E5A" stroke-width="1.2"/>
+<rect x="222" y="362" width="36" height="12" rx="2" fill="#B4B2A9" stroke="#5F5E5A"/>
+<polygon points="233,374 247,374 244,394 236,394" fill="#B4B2A9" stroke="#5F5E5A"/>
+<path d="M262 268 H406 L396 296 H272 Z" fill="#5F5E5A"/>
+<rect x="406" y="270" width="18" height="24" rx="3" fill="#B4B2A9" stroke="#5F5E5A"/>
+<path d="M424 273 L600 268 Q642 268 642 282 Q642 296 600 296 L424 291 Z" fill="#2C2C2A"/>
+<rect x="322" y="296" width="20" height="12" rx="2" fill="#888780"/>
+</g>
+<g transform="translate(262,295) rotate(0)"><path d="M-7 -6 L4 0 L-7 6" fill="none" stroke="#993C1D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="translate(290,210) rotate(-90)"><path d="M-7 -6 L4 0 L-7 6" fill="none" stroke="#993C1D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="translate(325,125) rotate(0)"><path d="M-7 -6 L4 0 L-7 6" fill="none" stroke="#993C1D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g transform="translate(335,210) rotate(180)"><path d="M-7 -6 L4 0 L-7 6" fill="none" stroke="#185FA5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="translate(315,350) rotate(90)"><path d="M-7 -6 L4 0 L-7 6" fill="none" stroke="#185FA5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g><g transform="translate(275,475) rotate(180)"><path d="M-7 -6 L4 0 L-7 6" fill="none" stroke="#185FA5" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+<text x="120" y="595" font-size="36" font-weight="600" fill="#2C2C2A" text-anchor="middle">Chaudière</text>
+<line x1="450" y1="165" x2="428" y2="165" stroke="#888780" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="458" y="174" font-size="36" font-weight="600" fill="#2C2C2A">Tête de groupe</text>
+<text x="276" y="148" font-size="30" fill="#993C1D" text-anchor="end">Eau chaude monte</text>
+<text x="340" y="448" font-size="30" fill="#185FA5">Eau refroidie</text>
+<text x="340" y="484" font-size="30" fill="#185FA5">redescend</text>
+<line x1="150" y1="632" x2="200" y2="632" stroke="#D85A30" stroke-width="4" stroke-dasharray="12 9"/>
+<text x="210" y="642" font-size="28" fill="#5F5E5A">Eau chaude</text>
+<line x1="410" y1="632" x2="460" y2="632" stroke="#378ADD" stroke-width="4" stroke-dasharray="12 9"/>
+<text x="470" y="642" font-size="28" fill="#5F5E5A">Eau refroidie</text>
+</svg>
+<figcaption>Le thermosiphon d'une E61&nbsp;: l'eau chaude monte vers le groupe, puis redescend refroidie.</figcaption>
+</figure>
+<p>À l'intérieur du groupe, le levier d'infusion actionne une came. Selon sa position, elle laisse entrer l'eau pour l'infusion ou ouvre la valve d'évacuation (exhaust valve), qui relâche la pression à la fin du café. Ce sont des pièces simples, robustes, et qui s'usent de façon prévisible.</p>
+
+<h2 style="margin-top:2.2rem">Marques que nous réparons</h2>
+<p class="section-sub" style="margin-bottom:.5rem">Machines E61 et machines de la même famille.</p>
+<table class="brand-table"><tbody><tr><td><strong>Rocket</strong></td><td></td></tr><tr><td><strong>ECM</strong></td><td></td></tr><tr><td><strong>Profitec</strong></td><td></td></tr><tr><td><strong>Lelit</strong></td><td>sauf le modèle Bianca</td></tr><tr><td><strong>Nuova Simonelli</strong></td><td></td></tr><tr><td><strong>Quickmill</strong></td><td></td></tr><tr><td><strong>Stone</strong></td><td>sur demande</td></tr><tr><td><strong>La Pavoni</strong></td><td>Europiccola</td></tr><tr><td><strong>Gaggia</strong></td><td>Classic</td></tr><tr><td><strong>Rancilio</strong></td><td>Silvia</td></tr></tbody></table>
+<p style="font-size:.9rem;color:var(--text-light)">Votre marque ne figure pas dans la liste? Écrivez-nous, on vous répond franchement.</p>
+
+<h2 style="margin-top:2.2rem">Notre entretien d'une E61</h2>
+<p>L'entretien complet d'une E61 se fait en trois volets. Selon l'état de la machine, on ajuste chacun.</p>
+<div class="volets">
+<div class="volet"><h3>1. Tête de groupe</h3><ul>
+<li>Remplacement des joints PTFE</li>
+<li>Remplacement des joints de valves</li>
+<li>Nettoyage des ressorts et de la came</li>
+<li>Nettoyage et détartrage de la tête selon son état</li></ul>
+<p style="font-size:.85rem;color:var(--text-light);margin-top:.6rem">La came est remplacée si elle est usée, ce qui est rare.</p></div>
+<div class="volet"><h3>2. Électrovannes</h3><ul>
+<li>Nettoyage complet, s'il y a lieu</li></ul></div>
+<div class="volet"><h3>3. Chaudière</h3><ul>
+<li>Vérification de la chaudière et du pressostat</li>
+<li>Détartrage seulement s'il y a du tartre, avec deux rinçages complets</li>
+<li>Remplacement de la sonde de niveau d'eau et de son joint, à chaque entretien</li></ul></div>
+</div>
+<p>Pourquoi remplacer la sonde de niveau d'eau à chaque fois? Parce que le tartre peut la tromper&nbsp;: la machine croit alors que la chaudière n'est pas pleine et la remplit de trop. Son joint est remplacé en même temps.</p>
+<div class="note-box"><strong>Fréquence habituelle&nbsp;: aux 2 à 3 ans.</strong> Elle varie selon votre utilisation et la qualité de votre eau.</div>
+
+<h2 style="margin-top:2.2rem">Pourquoi on ne détartre pas selon un calendrier</h2>
+<p>Détartrer «&nbsp;aux six mois&nbsp;» ne tient pas la route&nbsp;: chaque machine et chaque eau sont différentes. Détartrer sans besoin fatigue les joints et les pièces pour rien. Attendre trop longtemps laisse le tartre s'installer dans la chaudière et dans le groupe. Plutôt que de suivre un calendrier, on regarde l'état réel de la machine et on détartre seulement si elle en a besoin.</p>
+<p>L'eau joue un grand rôle dans cette équation. Une page complète sur le sujet pourrait suivre.</p>
+
+<h2 style="margin-top:2.2rem">Avant que la machine ne fuie</h2>
+<p>Une fuite, vous la voyez&nbsp;: de l'eau sur le comptoir, une flaque sous la machine. Ce que vous ne voyez pas, c'est un joint qui suinte, une valve qui retient mal. Ces petites pertes passent inaperçues pendant des mois et abîment ce qui les entoure.</p>
+<p>Un café moins chaud, un groupe qui goutte, un levier d'infusion plus dur&nbsp;: un simple entretien règle très souvent le problème, avant qu'il devienne une grosse réparation.</p>
+
+<h2 style="margin-top:2.2rem">Ce que vous pouvez faire vous-même</h2>
+<ul style="margin-left:1.2rem;margin-bottom:1rem">
+<li style="margin-bottom:.5rem"><strong>Le rétrolavage (backflush)</strong> avec un détergent pour machines espresso&nbsp;: oui, c'est à votre portée.</li>
+<li style="margin-bottom:.5rem"><strong>La douche</strong> peut se nettoyer. Si elle est entartrée, on remplace le joint d'anneau de blocage.</li>
+<li style="margin-bottom:.5rem"><strong>Les pièces mécaniques du groupe et le détartrage de la chaudière</strong> sont du travail d'atelier.</li></ul>
+
+<h2 style="margin-top:2.2rem">Avant d'acheter une E61</h2>
+<p>Une E61 est une belle machine, mais elle demande de la rigueur&nbsp;: température du groupe, nettoyage, réglage de la mouture. Le vrai risque n'est pas la dépense, c'est la frustration quand on débute.</p>
+<p>Si vous commencez, notre recommandation honnête&nbsp;: la Rancilio Silvia ou la Gaggia Classic. Neuves ou usagées, ces deux machines offrent un très bon rapport qualité-prix, et vous apprendrez les bases avant de passer à une E61.</p>
+
+<h2 style="margin-top:2.2rem">Questions fréquentes</h2>
+<details class="faq-item"><summary>Quelle est la meilleure machine E61?</summary><p>Aucune réponse n'est universelle. Elle varie selon l'espace dont vous disposez, votre routine du matin, le nombre de cafés que vous préparez et le lait que vous buvez. Dites-nous comment vous consommez votre café&nbsp;: on vous répond honnêtement, même si la réponse est une machine plus simple.</p></details><details class="faq-item"><summary>Combien de temps faut-il pour la faire chauffer le matin?</summary><p>Le groupe est une grosse masse de laiton&nbsp;: il met plus de temps à atteindre sa température que la chaudière. Prévoyez de 25 à 30 minutes. Un groupe qui n'a pas fini de chauffer donne un café plus acide et moins constant.</p></details><details class="faq-item"><summary>Chaudière simple, échangeur de chaleur ou double chaudière&nbsp;: quelle différence?</summary><p>Chaudière simple&nbsp;: une seule chaudière fait tout. Comme il n'y a pas d'espace de vapeur séparé, c'est toute la chaudière qui doit chauffer, vers une température cible, et le groupe n'est pas inclus dans cette montée. Échangeur de chaleur (HX)&nbsp;: la chaudière chauffe jusqu'à une pression, et le groupe est chauffé presque au complet par le thermosiphon. Double chaudière&nbsp;: une chaudière pour le café et une pour la vapeur, ce qui permet de préparer un café et de faire mousser le lait en même temps.</p></details><details class="faq-item"><summary>Est-ce que je peux laisser ma machine allumée en permanence?</summary><p>Mieux vaut l'éteindre quand vous ne l'utilisez pas. Une machine allumée en continu sollicite sans arrêt son élément chauffant et ses autres composantes, et elles s'usent plus vite. L'éteindre la fait durer plus longtemps&nbsp;: il suffit de prévoir le temps de chauffe du groupe le lendemain.</p></details><details class="faq-item"><summary>Ma machine fuit. Que faire?</summary><p>Débranchez-la, ne forcez rien et contactez-nous. Une fuite que vous voyez est déjà avancée. Ce qui commence par suinter passe souvent inaperçu pendant des mois&nbsp;: c'est la raison d'être de l'entretien préventif.</p></details><details class="faq-item"><summary>À quelle fréquence faut-il faire l'entretien de ma E61?</summary><p>En général, aux 2 à 3 ans, selon l'utilisation et la qualité de votre eau.</p></details>
+
+<div class="divider"></div>
+<h2>Une question sur votre E61?</h2>
+<p>Écrivez-nous ou appelez-nous. On regarde votre situation avec vous.</p>
+<div class="cta"><a class="btn-primary" href="https://m.me/100063644934401" target="_blank" rel="noopener">Écrire sur Messenger</a><a class="btn-alt" href="tel:4509053582">450-905-3582</a></div>
+</div></div>
+
+<footer><p>© 2025 Les Réparations de Machines à Café Rive-Sud (RMCRS) · 38 Montée Robert, Saint-Basile-le-Grand · <a href="tel:4509053582">450-905-3582</a></p></footer>
+<script>function toggleMenu(){document.getElementById('nav-links').classList.toggle('open');document.querySelector('.hamburger').classList.toggle('open')}</script>
+</body></html>
